@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Movie App</h1>
+        <nav>
+            <button id="register-button">Регистрация</button>
+            <button id="movies-button">Список фильмов</button>
+        </nav>
+    </header>
+    <main>
+        <section id="registration-section" class="hidden">
+            <h2>Регистрация</h2>
+            <form id="registration-form">
+                <label for="username">Имя пользователя:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="password">Пароль:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Зарегистрироваться</button>
+            </form>
+        </section>
+        <section id="movies-section" class="hidden">
+            <h2>Список фильмов</h2>
+            <div id="genre-filter">
+                <label for="genre-select">Фильтр по жанрам:</label>
+                <select id="genre-select">
+                    <option value="all">Все</option>
+                </select>
+            </div>
+            <div id="movies-list"></div>
+        </section>
+        <section id="comments-section" class="hidden">
+            <h2>Комментарии</h2>
+            <div id="comments-list"></div>
+            <form id="comment-form">
+                <label for="comment-text">Ваш комментарий:</label>
+                <textarea id="comment-text" name="comment-text" required></textarea>
+                <input type="hidden" id="comment-movie-id" name="comment-movie-id">
+                <button type="submit">Отправить комментарий</button>
+            </form>
+        </section>
+    </main>
+    <script src="scripts.js"></script>
+</body>
+</html>

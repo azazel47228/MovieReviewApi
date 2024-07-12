@@ -1,0 +1,40 @@
+### Регистрация нового пользователя
+POST https://localhost:5055/api/users
+Content-Type: application/json
+
+{
+  "UserName": "newuser",
+  "Email": "newuser@example.com",
+  "Password": "password",
+  "RegistrationDate": "2024-07-12"
+}
+
+###
+
+### Получение списка всех фильмов
+GET https://localhost:5055/api/movies
+
+###
+
+### Получение всех жанров
+GET https://localhost:5055/api/genres
+
+###
+
+### Добавление нового комментария к фильму
+POST https://localhost:5055/api/reviews
+Content-Type: application/json
+
+{
+  "MovieID": 1,
+  "UserID": 1,
+  "ReviewText": "Отличный фильм, мне очень понравился!",
+  "Rating": 5
+}
+
+###
+
+### Получение всех комментариев к определённому фильму
+GET https://localhost:5055/api/reviews?movieID=1
+
+###
